@@ -1,0 +1,5 @@
+discord
+pynacl
+pafy
+youtube_dl
+python-dotenv
