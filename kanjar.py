@@ -2,24 +2,48 @@ import discord
 from discord.ext import commands, tasks
 import os
 import re
-
-
+import requests
+import json
 import urllib.request
 import pafy
 
 from dotenv import load_dotenv
 
-C_token = 'NjkyOTU1OTg2MjgwODQxMzIx.Xn2DjQ.p6Hp5wClXNVOg6kBGd-a9mz0-KM'
-
+C_token = 'NjkyOTU1OTg2MjgwODQxMzIx.Xn2DjQ.frNgESMw8sNmtgnQYbzZp7Orbdg'
+global cnt
+cnt =0
   
 client = commands.Bot(command_prefix='`', intents = discord.Intents.all())
 
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you mum in shower!!"))
+    print("suru!!")
 
 @client.command(name="join")
-
 async def join(ctx):
     print(ctx.author.voice.channel)
     await ctx.author.voice.channel.connect()
+
+@client.event
+async def on_message(message):
+    if client.user.mentioned_in(message):
+            await message.channel.send("Dubara mention mat kario, gaand mardunga!!")
+            await message.channel.send(message.author)
+
+@client.event
+async def on_message(message):
+    word_list = ['rl?', 'valo?', 'chutiya', 'ass', 'titties', 'nipple', 'Ass', 'ASS', 'bhenchod', 'gaand']
+    messageContent = message.content
+    if len(messageContent) > 0:
+        for word in word_list:
+            if word in messageContent:
+                r = urllib.request.urlopen(
+    "https://g.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (word, "HYDM53SGJD2K", 1))
+                temp = json.loads(r.read().decode())
+                print (temp['results'][0]['media'][0]['mediumgif']['url'])
+                message.channel.send(f'Did someone say {word}')
+                await message.channel.send(temp['results'][0]['media'][0]['mediumgif']['url'])
 
 @client.command(name="play")
 async def play(ctx,tis):
@@ -40,5 +64,7 @@ async def play(ctx,tis):
 ##    global p
 ##    p=vlc.MediaPlayer(best.url)
 ##    p.play()
+
+#@client.command(name=)
     
 client.run(C_token)
