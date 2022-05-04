@@ -9,7 +9,7 @@ import pafy
 
 from dotenv import load_dotenv
 
-C_token = 'NjkyOTU1OTg2MjgwODQxMzIx.Xn2DjQ.frNgESMw8sNmtgnQYbzZp7Orbdg'
+C_token = 'TOKEN'
 global cnt
 cnt =0
   
@@ -28,12 +28,12 @@ async def join(ctx):
 @client.event
 async def on_message(message):
     if client.user.mentioned_in(message):
-            await message.channel.send("Dubara mention mat kario, gaand mardunga!!")
+            await message.channel.send("please dont mention again!!")
             await message.channel.send(message.author)
 
 @client.event
 async def on_message(message):
-    word_list = ['rl?', 'valo?', 'chutiya', 'ass', 'titties', 'nipple', 'Ass', 'ASS', 'bhenchod', 'gaand']
+    word_list = ['rl?', 'valo?', 'gta']
     messageContent = message.content
     if len(messageContent) > 0:
         for word in word_list:
@@ -58,13 +58,7 @@ async def play(ctx,tis):
 
     video = pafy.new(url)
     best = video.audiostreams[0]
-##    print(type(best))
     player = (discord.FFmpegPCMAudio(best.url))
     ctx.voice_client.play(player)
-##    global p
-##    p=vlc.MediaPlayer(best.url)
-##    p.play()
-
-#@client.command(name=)
     
 client.run(C_token)
