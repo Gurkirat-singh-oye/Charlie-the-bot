@@ -17,7 +17,7 @@ client = commands.Bot(command_prefix='`', intents = discord.Intents.all())
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you mum in shower!!"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Blade Runner 2049!!"))
     print("suru!!")
 
 @client.command(name="join")
