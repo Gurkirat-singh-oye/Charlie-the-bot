@@ -1,4 +1,8 @@
 discord
 pafy
-requests
+requests_html
 youtube_dl
+lxml
+asyncio
+random
+urllib.request
