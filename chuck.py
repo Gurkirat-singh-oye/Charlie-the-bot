@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks
-import os
+#import os
 import re
 import requests
 import json
