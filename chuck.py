@@ -17,7 +17,7 @@ switch = 0
   
 client = commands.Bot(command_prefix="`", intents = discord.Intents.all())
 
-loop = asyncio.get_event_loop()
+#loop = asyncio.get_event_loop()
 
 @client.event
 async def on_ready():
@@ -90,7 +90,7 @@ async def startukrupdate(ctx):
 	t='ggez'
 	while True:
 		t=await ukrwar(ctx,t)
-		await asyncio.sleep(1)
+		await asyncio.sleep(1800)
 
 @client.event
 async def on_message(message):
