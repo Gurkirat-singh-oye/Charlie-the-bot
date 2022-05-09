@@ -1,1 +1,1 @@
-worker: python3 chuck.py
+web: python3 chuck.py
