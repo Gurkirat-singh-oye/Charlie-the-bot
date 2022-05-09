@@ -9,7 +9,7 @@ import pafy
 
 from dotenv import load_dotenv
 
-C_token = 'TOKEN'
+C_token = 'NjkyOTU1OTg2MjgwODQxMzIx.Xn2DjQ.l9FDkwKkPTQfPqCgod9zzA0E18U'
 global cnt
 cnt =0
   
