@@ -1,3 +1,4 @@
 discord
 pafy
 requests
+youtube_dl
