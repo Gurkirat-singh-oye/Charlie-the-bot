@@ -4,4 +4,3 @@ requests_html
 youtube_dl
 lxml
 asyncio
-urllib.request
