@@ -45,20 +45,20 @@ async def on_message(message):
                 message.channel.send(f'Did someone say {word}')
                 await message.channel.send(temp['results'][0]['media'][0]['mediumgif']['url'])
 
-@client.command(name="play")
-async def play(ctx,tis):
-    voice_channel = ctx.author.voice.channel
-    await ctx.author.voice.channel.connect()
-    print (tis)
-    html = urllib.request.urlopen(
-        f"https://www.youtube.com/results?search_query={tis}")
-    video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
+#@client.command(name="play")
+#async def play(ctx,tis):
+#    voice_channel = ctx.author.voice.channel
+#    await ctx.author.voice.channel.connect()
+ #   print (tis)
+  #  html = urllib.request.urlopen(
+   #     f"https://www.youtube.com/results?search_query={tis}")
+    #video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
 
-    url = f'https://www.youtube.com/watch?v={video_ids[0]}'
+#    url = f'https://www.youtube.com/watch?v={video_ids[0]}'
 
-    video = pafy.new(url)
-    best = video.audiostreams[0]
-    player = (discord.FFmpegPCMAudio(best.url))
-    ctx.voice_client.play(player)
+#    video = pafy.new(url)
+ #   best = video.audiostreams[0]
+  #  player = (discord.FFmpegPCMAudio(best.url))
+#    ctx.voice_client.play(player)
     
 client.run(C_token)
