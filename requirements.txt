@@ -1,0 +1,4 @@
+discord
+pafy
+requests
+dotenv
