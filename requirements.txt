@@ -1,8 +1,7 @@
-discord
+discord.py
 pafy
 requests_html
 youtube_dl
 lxml
 asyncio
-random
 urllib.request
