@@ -1,1 +1,1 @@
-worker: python3 chuck.py
+worker: python3 kanjar.py
