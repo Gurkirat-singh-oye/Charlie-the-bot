@@ -9,7 +9,6 @@ import json
 import urllib.request
 import pafy
 
-from dotenv import load_dotenv
 
 C_token = 'NjkyOTU1OTg2MjgwODQxMzIx.GErMTU.7K7x7Ah03GscqSD2qN0BGW7FTLpyluK2Dm9x1U'
 global cnt
