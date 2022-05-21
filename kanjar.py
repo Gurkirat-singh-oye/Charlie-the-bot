@@ -1,7 +1,3 @@
-from email import message
-from email.policy import default
-from multiprocessing.connection import Client
-from turtle import title
 import discord
 from discord.ext import commands, tasks
 import os
