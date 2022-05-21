@@ -1,10 +1,6 @@
-from lib2to3.pgen2.pgen import ParserGenerator
-from socket import J1939_PGN_ADDRESS_COMMANDED
 import requests as rq
 import random
-from requests_html import HTMLSession
 import urllib
-import lxml
 import json
 import re
 
