@@ -1,4 +1,3 @@
-pafy
 pynacl
 discord.py
 requests_html
