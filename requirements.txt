@@ -1,4 +1,4 @@
-tk
+pynacl
 discord.py
 pafy
 requests_html
