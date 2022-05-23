@@ -74,9 +74,14 @@ async def save(ctx,arg1,arg2 = 'default'):
     await ctx.channel.send(say)
 
 @client.command()
+async def listradio(ctx):
+    for a in devhere.songdic["savedsongs"]["default"]:
+        await ctx.channel.send(a)
+
+@client.command()
 async def playserveradio(ctx):
     for a in devhere.songdic["savedsongs"]["default"]:
-        await ctx.channel.send(f"playing these songs")
+        await play(ctx, a)
 
 @client.event
 async def on_message(message):
