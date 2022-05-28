@@ -19,7 +19,7 @@ client = commands.Bot(command_prefix='`', intents = discord.Intents.all())
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name="incel race"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name="The incel race"))
     print("suru!!")
 
 @client.command(name="join")
