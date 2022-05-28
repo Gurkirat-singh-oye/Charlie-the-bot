@@ -4,4 +4,4 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: curl https://6648-110-235-217-112.ngrok.io/push/Gurkirat-singh-oye/Charlie-the-bot
+      - run: curl https://7d8a-110-235-217-112.ngrok.io/push/Gurkirat-singh-oye/Charlie-the-bot
